@@ -1,1 +1,1 @@
-Put your resume here as resume.pdf (the Resume buttons link to assets/resume.pdf).
+The Resume buttons link to resume.docx in this folder.

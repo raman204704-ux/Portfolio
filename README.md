@@ -7,7 +7,7 @@ Static portfolio site (HTML, CSS, JavaScript). No build step.
 - `css/style.css` - styling and light/dark themes
 - `js/projects.js` - **edit this** to change projects, skills, focus cards and chat answers
 - `js/main.js` - rendering, theme toggle, hero animation, chat widget
-- `assets/resume.pdf` - add your resume here
+- `assets/resume.docx` - downloadable resume
 - `robots.txt`
 
 ## Run locally
@@ -21,4 +21,3 @@ Open `index.html` in a browser.
 ## To do
 - Replace `your-username` in the GitHub links (`index.html`, `js/projects.js`)
 - Fill in Education and the personal project details
-- Add `assets/resume.pdf`

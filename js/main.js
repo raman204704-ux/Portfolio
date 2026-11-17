@@ -12,7 +12,7 @@ const root=document.documentElement,tb=$("theme");
 const dark=()=>root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
 const lab=()=>tb.textContent=dark()?"Light mode":"Dark mode";
 function setT(t){root.dataset.theme=t;lab();try{localStorage.setItem("theme",t)}catch(e){}}
-try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+try{const s=localStorage.getItem("theme");root.dataset.theme=s||"light"}catch(e){root.dataset.theme="light"}
 lab();tb.onclick=()=>setT(dark()?"light":"dark");
 // hero pipeline
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;

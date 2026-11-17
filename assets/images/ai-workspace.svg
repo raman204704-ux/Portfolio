@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
+  <title id="title">AI engineering workspace</title>
+  <desc id="desc">A laptop displaying a connected AI workflow on a warm, minimal desk.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#6e806f" opacity=".22"/>
+    </pattern>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8f8f4"/>
+      <stop offset="1" stop-color="#e9eee8"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c9ae88"/>
+      <stop offset="1" stop-color="#b79770"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="620" fill="#e9e8e0"/>
+  <circle cx="1170" cy="84" r="210" fill="#d9e0d3"/>
+  <circle cx="160" cy="468" r="250" fill="#dedfd6"/>
+  <rect width="1440" height="620" fill="url(#dots)" opacity=".55"/>
+  <path d="M0 482h1440v138H0z" fill="url(#desk)"/>
+  <path d="M0 482h1440" stroke="#ad8e68" stroke-width="4" opacity=".6"/>
+  <g opacity=".9">
+    <path d="M214 481c18-93 15-137 6-188m10 130c-46-34-62-68-65-111m69 83c34-43 43-82 38-126m-46 46c-40-5-65-22-81-49m84 113c36-5 60-22 79-49" fill="none" stroke="#546c58" stroke-linecap="round" stroke-width="12"/>
+    <path d="M146 308c-2-42-34-48-47-39 1 32 19 52 47 39m45 17c0-41 31-53 48-42-2 34-21 51-48 42m-76-88c-1-37-28-47-43-39 2 31 16 48 43 39m105 2c5-39 34-46 47-34-4 30-22 45-47 34" fill="#80927a"/>
+    <path d="M103 479h171l-17 42H119z" fill="#b77c58"/>
+    <path d="M117 481h144" stroke="#d4a47b" stroke-width="7"/>
+  </g>
+  <g>
+    <rect x="398" y="88" width="690" height="390" rx="24" fill="#222826"/>
+    <rect x="416" y="106" width="654" height="350" rx="13" fill="url(#screen)"/>
+    <path d="M416 119a13 13 0 0 1 13-13h628a13 13 0 0 1 13 13v30H416z" fill="#2c3430"/>
+    <circle cx="438" cy="128" r="4" fill="#d27c64"/>
+    <circle cx="454" cy="128" r="4" fill="#d4b56c"/>
+    <circle cx="470" cy="128" r="4" fill="#7fa17b"/>
+    <rect x="500" y="120" width="280" height="16" rx="8" fill="#3c4640"/>
+    <rect x="446" y="169" width="168" height="254" rx="8" fill="#f3f4ef"/>
+    <text x="468" y="199" fill="#596b5b" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">AI WORKFLOW</text>
+    <rect x="468" y="216" width="112" height="8" rx="4" fill="#cbd3c8"/>
+    <rect x="468" y="236" width="90" height="8" rx="4" fill="#dce1d8"/>
+    <rect x="468" y="277" width="126" height="52" rx="8" fill="#fff" stroke="#d9ded5"/>
+    <circle cx="489" cy="303" r="8" fill="#65836a"/>
+    <rect x="507" y="293" width="51" height="7" rx="3.5" fill="#9ba99a"/>
+    <rect x="507" y="307" width="68" height="5" rx="2.5" fill="#d0d6cd"/>
+    <rect x="468" y="341" width="126" height="52" rx="8" fill="#fff" stroke="#d9ded5"/>
+    <circle cx="489" cy="367" r="8" fill="#c19160"/>
+    <rect x="507" y="357" width="51" height="7" rx="3.5" fill="#9ba99a"/>
+    <rect x="507" y="371" width="68" height="5" rx="2.5" fill="#d0d6cd"/>
+    <text x="643" y="186" fill="#29302c" font-family="Arial,sans-serif" font-size="17" font-weight="700">A system that learns from data</text>
+    <text x="643" y="207" fill="#7d877d" font-family="Arial,sans-serif" font-size="11">Retrieval · reasoning · reliable answers</text>
+    <path d="M712 279h54m48 0h54m48 0h54" stroke="#aab5a8" stroke-width="3" stroke-linecap="round"/>
+    <path d="m758 272 9 7-9 7m96-7 9 7-9 7m96-7 9 7-9 7" fill="none" stroke="#8b9b89" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect x="634" y="245" width="132" height="68" rx="11" fill="#fff" stroke="#d5ddd3" stroke-width="2"/>
+    <circle cx="654" cy="267" r="6" fill="#769078"/>
+    <text x="668" y="271" fill="#36443a" font-family="Arial,sans-serif" font-size="11" font-weight="700">User question</text>
+    <rect x="650" y="283" width="94" height="5" rx="2.5" fill="#e1e5de"/>
+    <rect x="812" y="245" width="132" height="68" rx="11" fill="#e3ebe1" stroke="#b8c9b8" stroke-width="2"/>
+    <circle cx="832" cy="267" r="6" fill="#5f8065"/>
+    <text x="846" y="271" fill="#36443a" font-family="Arial,sans-serif" font-size="11" font-weight="700">Search context</text>
+    <rect x="828" y="283" width="94" height="5" rx="2.5" fill="#c7d4c6"/>
+    <rect x="990" y="245" width="62" height="68" rx="11" fill="#fff" stroke="#d5ddd3" stroke-width="2"/>
+    <path d="m1008 279 10 10 22-24" fill="none" stroke="#648269" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <text x="643" y="365" fill="#596b5b" font-family="Arial,sans-serif" font-size="11" font-weight="700">GROUNDED OUTPUT</text>
+    <rect x="643" y="378" width="357" height="7" rx="3.5" fill="#cbd3c8"/>
+    <rect x="643" y="394" width="298" height="7" rx="3.5" fill="#d9dfd7"/>
+    <path d="M352 478h782l-58 45H411z" fill="#d8d9d3"/>
+    <path d="M411 523h665l34 14H376z" fill="#8e9990"/>
+    <path d="M674 487h177l-13 22H688z" fill="#b7c0b7"/>
+  </g>
+  <g transform="translate(1135 320)">
+    <rect x="0" y="0" width="178" height="112" rx="16" fill="#fafaf6" stroke="#d3d9ce" stroke-width="2"/>
+    <circle cx="30" cy="31" r="14" fill="#dce7da"/>
+    <path d="m24 31 5 5 8-10" fill="none" stroke="#5d7b62" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <text x="54" y="29" fill="#445346" font-family="Arial,sans-serif" font-size="12" font-weight="700">MODEL CHECK</text>
+    <rect x="22" y="60" width="126" height="7" rx="3.5" fill="#d5ddd2"/>
+    <rect x="22" y="77" width="96" height="7" rx="3.5" fill="#e3e7e0"/>
+  </g>
+  <g transform="translate(302 350)">
+    <rect width="78" height="94" rx="15" fill="#f7f5ee" stroke="#d6d4ca" stroke-width="2"/>
+    <path d="M23 27h32v39H23z" fill="#6e886f"/>
+    <path d="M30 37h18M30 46h18M30 55h12" stroke="#e9eee6" stroke-linecap="round" stroke-width="3"/>
+    <path d="M27 72h24" stroke="#c3b9a5" stroke-linecap="round" stroke-width="4"/>
+  </g>
+</svg>

@@ -19,7 +19,24 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.querySelectorAll(".stage").forEach((s,i)=>reduce?s.classList.add("on"):setTimeout(()=>s.classList.add("on"),500+i*650));
 // chat
 const cb=$("chatb"),ch=$("chat"),log=$("log");
-cb.onclick=()=>{const o=ch.classList.toggle("open");cb.setAttribute("aria-expanded",o);cb.textContent=o?"Close":"Ask about Jatin"};
+cb.onclick=()=>{const o=ch.classList.toggle("open");cb.setAttribute("aria-expanded",o);cb.textContent=o?"Close":"✨ Ask about Jatin’s experience!"};
 $("qs").innerHTML=faq.map((f,i)=>`<button data-i="${i}">${E(f[0])}</button>`).join("");
 $("qs").onclick=e=>{const b=e.target.closest("button");if(!b)return;const f=faq[b.dataset.i];
 log.insertAdjacentHTML("beforeend",`<div class="q">${E(f[0])}</div><div class="a">${E(f[1])}</div>`);log.scrollTop=log.scrollHeight};
+
+// loader, metrics, free-text chat
+(function(){
+const L=$("loader"),n=$("ldn");
+if(L){if(reduce){L.remove()}else{let v=0;const t=setInterval(()=>{v=Math.min(100,v+Math.ceil(Math.random()*9));n.textContent=v+"%";
+if(v>=100){clearInterval(t);setTimeout(()=>{L.classList.add("done");setTimeout(()=>L.remove(),500)},200)}},45)}}
+$("metrics").innerHTML=[["50+","Test scenarios written"],[projects.filter(x=>x.g==="work").length,"Internship projects"],["2","Degrees: MCA and BSc CS"]].map(x=>`<div class="m"><b>${x[0]}</b><span>${E(x[1])}</span></div>`).join("");
+const words=s=>s.toLowerCase().match(/[a-z0-9+#]{3,}/g)||[];
+const stop=new Set(["what","who","how","does","did","has","have","his","him","the","and","about","tell","jatin","with","for","can","you"]);
+function answer(q){const w=words(q).filter(x=>!stop.has(x));let best=null,bs=0;
+const cand=[...faq.map(f=>({t:f[0]+" "+f[1],a:f[1]})),...projects.map(p=>({t:[p.name,p.desc,p.pts.join(" "),p.tech.join(" ")].join(" "),a:p.name+": "+p.desc+" "+p.pts.slice(0,2).join(". ")+"."}))];
+cand.forEach(c=>{const tw=new Set(words(c.t));const s=w.filter(x=>tw.has(x)).length;if(s>bs){bs=s;best=c}});
+return best&&bs>0?best.a:"I can only answer from this portfolio. Try asking about his projects, testing work, skills, education or how to contact him."}
+function send(){const i=$("ask"),q=i.value.trim();if(!q)return;i.value="";
+log.insertAdjacentHTML("beforeend",`<div class="q">${E(q)}</div><div class="a">${E(answer(q))}</div>`);log.scrollTop=log.scrollHeight}
+$("send").onclick=send;$("ask").addEventListener("keydown",e=>{if(e.key==="Enter")send()});
+})();

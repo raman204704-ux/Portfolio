@@ -14,10 +14,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<noscript><style>#loader{display:none}</style></noscript>
 </head>
 <body>
+<div id="loader" aria-hidden="true"><div class="ld-n" id="ldn">0%</div><p>JATIN MINHAS<br>AI / ML ENGINEER</p></div>
 <header><div class="wrap"><nav aria-label="Main">
 <a class="logo" href="#home">JATIN MINHAS</a>
+<ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
 <div class="right"><button class="theme-toggle" id="theme" aria-label="Switch colour theme" title="Switch colour theme">◐</button><a class="btn resume" href="assets/resume.docx" download>Resume</a></div>
 </nav></div></header>
 <main>
@@ -44,12 +47,16 @@
 <ul class="chips band" id="hero-chips"></ul>
 </div></section>
 
+<section class="strip"><div class="wrap"><p>Click below to view the resume and verify the work.</p><a class="btn primary" href="assets/resume.docx" download>Download Resume</a></div></section>
+
 <section id="about"><div class="wrap">
 <p class="kick">01 / ABOUT</p><h2>Practical AI, built on solid foundations.</h2>
 <div class="two about-intro">
 <p>I’m an AI/ML engineer with an MCA and a BSc in Computer Science. My work spans machine learning, Generative AI, backend development, data analysis, and evaluating AI outputs against clear expectations.</p>
 <ul class="facts"><li><b>Focus</b><span>RAG, LLM evaluation, prompt testing, and AI workflows</span></li><li><b>Toolkit</b><span>Python, FastAPI, Django, Scikit-learn, Pandas, and NumPy</span></li><li><b>Experience</b><span>AI/ML Intern at CS Infotech, Chandigarh</span></li></ul>
 </div>
+<div class="metrics" id="metrics"></div>
+<p class="banner">⚡ Personal projects and experiments · Open to full-time AI/ML roles</p>
 <div class="cards" id="focus"></div>
 </div></section>
 
@@ -89,8 +96,12 @@
 </main>
 <footer><div class="wrap">© <span id="yr"></span> Jatin Minhas. Built with HTML, CSS and JavaScript.</div></footer>
 
-<button class="btn primary" id="chatb" aria-expanded="false" aria-controls="chat">Ask about Jatin</button>
-<div id="chat" role="dialog" aria-label="Ask about Jatin"><h4>Ask about Jatin</h4><div id="log" aria-live="polite"><div class="a">Hi! Pick a question and I will answer from this portfolio.</div></div><div id="qs"></div></div>
+<button class="btn primary" id="chatb" aria-expanded="false" aria-controls="chat">✨ Ask about Jatin’s experience!</button>
+<div id="chat" role="dialog" aria-label="Ask about Jatin">
+<div class="chead"><span class="av">JM</span><div><h4>Jatin AI Assistant</h4><small>Online · answers from this portfolio</small></div></div>
+<div id="log" aria-live="polite"><div class="a">👋 Hi! Ask me about Jatin’s projects, testing work, skills, education or how to contact him.</div></div>
+<div id="qs"></div>
+<div class="cin"><input id="ask" type="text" placeholder="Ask about Jatin…" aria-label="Your question" autocomplete="off"><button class="btn primary" id="send">Send</button></div></div>
 
 <script src="js/projects.js"></script>
 <script src="js/main.js"></script>

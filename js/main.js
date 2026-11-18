@@ -36,7 +36,16 @@ function answer(q){const w=words(q).filter(x=>!stop.has(x));let best=null,bs=0;
 const cand=[...faq.map(f=>({t:f[0]+" "+f[1],a:f[1]})),...projects.map(p=>({t:[p.name,p.desc,p.pts.join(" "),p.tech.join(" ")].join(" "),a:p.name+": "+p.desc+" "+p.pts.slice(0,2).join(". ")+"."}))];
 cand.forEach(c=>{const tw=new Set(words(c.t));const s=w.filter(x=>tw.has(x)).length;if(s>bs){bs=s;best=c}});
 return best&&bs>0?best.a:"I can only answer from this portfolio. Try asking about his projects, testing work, skills, education or how to contact him."}
-function send(){const i=$("ask"),q=i.value.trim();if(!q)return;i.value="";
-log.insertAdjacentHTML("beforeend",`<div class="q">${E(q)}</div><div class="a">${E(answer(q))}</div>`);log.scrollTop=log.scrollHeight}
+const hist=[];
+if(CHAT_API){const s=document.querySelector(".chead small");if(s)s.textContent="Online · Powered by Groq · answers from this portfolio"}
+async function send(){const i=$("ask"),q=i.value.trim();if(!q)return;i.value="";
+log.insertAdjacentHTML("beforeend",`<div class="q">${E(q)}</div><div class="a" id="pend">…</div>`);log.scrollTop=log.scrollHeight;
+let a="";
+if(CHAT_API){try{const ctl=new AbortController(),tm=setTimeout(()=>ctl.abort(),45000);
+const r=await fetch(CHAT_API.replace(/\/$/,"")+"/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:q,history:hist.slice(-6)}),signal:ctl.signal});
+clearTimeout(tm);if(r.ok)a=(await r.json()).reply}catch(e){}}
+if(!a)a=answer(q);
+hist.push({role:"user",content:q},{role:"assistant",content:a});
+const p=$("pend");p.removeAttribute("id");p.textContent=a;log.scrollTop=log.scrollHeight}
 $("send").onclick=send;$("ask").addEventListener("keydown",e=>{if(e.key==="Enter")send()});
 })();

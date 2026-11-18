@@ -1,4 +1,7 @@
 // ---- EDIT YOUR CONTENT HERE ----
+// Paste your deployed chat API address here (for example "https://jatin-portfolio-chat.onrender.com").
+// While it is empty, the assistant answers from the portfolio text in the browser.
+const CHAT_API="";
 const heroChips=["Python","Machine Learning","FastAPI","Django","Generative AI","RAG","LLM evaluation","Pandas","NumPy","Scikit-learn","LangChain","SQL"];
 const focus=[
 ["01 // PYTHON","Data-driven development","Built AI and analytics applications using Python, NumPy, Pandas and modern backend frameworks.",["Python","NumPy","Pandas"]],
